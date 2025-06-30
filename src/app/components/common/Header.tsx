@@ -50,7 +50,7 @@ export default function Header() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
             className="absolute top-[64px] left-0 w-full z-40 md:hidden
-             bg-zinc-900/90 bg-black/95 backdrop-blur-3xl border-t border-zinc-800
+            bg-black/95 backdrop-blur-3xl border-t border-zinc-800
              px-4 pb-8 pt-2"
           >
             <div className="flex flex-col items-center space-y-4">
