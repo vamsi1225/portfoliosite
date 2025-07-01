@@ -18,7 +18,7 @@ export default function HeroIntro() {
   return (
     <section className="mt-4 md:mt-16 mb-8 text-foreground m-0 p-0">
       <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-[3rem] m-0 p-0"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl font-bold leading-[3rem] m-0 p-0"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
