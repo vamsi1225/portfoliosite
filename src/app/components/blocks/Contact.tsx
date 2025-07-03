@@ -12,8 +12,7 @@ export default function Contact() {
         <li className="flex items-center space-x-3">
           <Mail className="w-6 h-6 text-teal-400" />
           <a href="mailto:shra1.naikini@gmail.com" className="hover:underline">
-            shra1.naikini@gmail.com
-          </a>
+            shra1.naikini@gmail.com</a>
         </li>
         <li className="flex items-center space-x-3">
           <Phone className="w-6 h-6 text-teal-400" />
