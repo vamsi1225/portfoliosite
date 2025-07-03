@@ -2,7 +2,7 @@
 
 export default function Interests() {
   return (
-    <section className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 text-foreground bg-background">
+    <section className="py-4 md:py-12 max-w-5xl mx-auto">
       <h2 className="text-3xl font-semibold mb-6 text-emerald-400">Interests & Passions</h2>
 
       <p className="mb-4 text-lg leading-relaxed">

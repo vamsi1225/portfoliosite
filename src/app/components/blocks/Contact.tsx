@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Linkedin } from 'lucide-react'; // Optional icons,
 
 export default function Contact() {
   return (
-    <section className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 text-foreground bg-background">
+    <section className="py-4 md:py-12 max-w-5xl mx-auto">
       <h2 className="text-3xl font-semibold mb-6 text-emerald-400">Get in Touch</h2>
       <p className="mb-6">Feel free to reach out via any of the below methods:</p>
 

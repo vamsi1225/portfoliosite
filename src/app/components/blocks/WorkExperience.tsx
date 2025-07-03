@@ -2,7 +2,7 @@
 
 export default function WorkExperience() {
   return (
-    <section className="px-4 sm:px-6 md:px-8 py-12 max-w-5xl mx-auto">
+    <section className="py-4 md:py-12 max-w-5xl mx-auto">
       <h2 className="text-3xl font-semibold mb-4 text-emerald-400">Work Experience & Skills</h2>
 
       <p className="mb-4 text-lg leading-relaxed">

@@ -2,7 +2,7 @@
 
 export default function AboutIntro() {
   return (
-    <section className="px-4 sm:px-6 md:px-8 py-12 max-w-5xl mx-auto">
+    <section className="py-4 md:py-12 max-w-5xl mx-auto">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-emerald-400">
           Who am I ?
