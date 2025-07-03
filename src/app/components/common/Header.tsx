@@ -5,9 +5,11 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '@/app/constants/nav';
 import { AnimatePresence, motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname(); // get current route
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-800 bg-background/80 backdrop-blur-sm text-foreground">
@@ -18,15 +20,22 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-sm font-medium">
-          {NAV_ITEMS.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-gray-300 hover:text-teal-400 transition"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`transition ${
+                  isActive
+                    ? 'text-teal-400 font-semibold'
+                    : 'text-gray-300 hover:text-teal-400'
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Hamburger Button */}
@@ -50,20 +59,27 @@ export default function Header() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.25 }}
             className="absolute top-[64px] left-0 w-full z-40 md:hidden
-            bg-black/95 backdrop-blur-3xl border-t border-zinc-800
-             px-4 pb-8 pt-2"
+              bg-black/95 backdrop-blur-3xl border-t border-zinc-800
+              px-4 pb-8 pt-2"
           >
             <div className="flex flex-col items-center space-y-4">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-3 text-lg font-medium text-gray-200 hover:text-teal-400 transition"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className={`block py-3 text-lg font-medium transition ${
+                      isActive
+                        ? 'text-teal-400 font-semibold'
+                        : 'text-gray-200 hover:text-teal-400'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
           </motion.nav>
         )}
