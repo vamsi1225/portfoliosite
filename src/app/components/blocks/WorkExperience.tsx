@@ -3,7 +3,6 @@
 export default function WorkExperience() {
   return (
     <section className="px-4 sm:px-6 md:px-8 py-12 max-w-5xl mx-auto">
-        
       <h2 className="text-3xl font-semibold mb-4 text-emerald-400">Work Experience & Skills</h2>
 
       <p className="mb-4 text-lg leading-relaxed">
@@ -21,7 +20,7 @@ export default function WorkExperience() {
       <p className="mb-4 text-lg leading-relaxed">
         Throughout my career, I have worked with a wide range of technologies including UI frameworks like Angular, React, and Next.js;  
         middleware such as Node.js, Express.js, and Flask; and databases like MySQL and PostgreSQL.  
-        I'm proficient in Python, JavaScript, and TypeScript, and comfortable with cloud platforms such as AWS and Azure.
+        I&apos;m proficient in Python, JavaScript, and TypeScript, and comfortable with cloud platforms such as AWS and Azure.
       </p>
 
       <p>
@@ -30,6 +29,3 @@ export default function WorkExperience() {
     </section>
   );
 }
-
-
-
