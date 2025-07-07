@@ -14,8 +14,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-800 bg-background/80 backdrop-blur-sm text-foreground">
       <div className="container mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold">
+        {/* <Link href="/" className="text-xl font-bold">
           &lt;Shravan /&gt;
+        </Link> */}
+         <Link href="/" className="text-xl font-bold">
+           Shravan.Naikini
         </Link>
 
         {/* Desktop Nav */}
