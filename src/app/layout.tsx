@@ -16,8 +16,16 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Sravan | Portfolio",
+  title: "Shravan Naikini",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: "/favicon.png",
+  },
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

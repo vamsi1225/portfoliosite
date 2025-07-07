@@ -6,7 +6,7 @@ import WorkExperience from "../components/blocks/WorkExperience";
 
 export default function About() {
   return (
-    <div className="bg-background text-foreground max-w-5xl mx-auto">
+    <div className="bg-background text-foreground mx-auto">
       <ProfileHeader />
       <AboutIntro />
       <WorkExperience />
