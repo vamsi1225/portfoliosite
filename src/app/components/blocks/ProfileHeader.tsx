@@ -8,12 +8,12 @@ export default function ProfileHeader() {
   return (
     <section className="relative flex flex-col items-center justify-center mb-24">
       {/* Full-Width Background Banner */}
-      <div className="w-full h-60 md:h-72 relative overflow-hidden rounded-xl shadow-md">
+      <div className="w-full h-60 md:h-72 relative overflow-hidden shadow-md">
         <Image
           src={backgroundImage}
           alt="Background"
           fill
-          className="object-cover rounded-xl"
+          className="object-cover"
           priority
         />
       </div>
