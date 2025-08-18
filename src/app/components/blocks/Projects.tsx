@@ -1,11 +1,9 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import backgroundImage from '@/app/assets/autism.jpg';
 import { projects } from '@/app/constants/nav';
 
 export default function Projects() {
-    const [hovered, setHovered] = useState<number | null>(null);
 
     return (
         <section className="mt-4 md:mt-16 text-foreground m-0 p-0 pb-16">
@@ -20,7 +18,6 @@ export default function Projects() {
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 relative">
                 {projects.map((project, index) => {
-                    const isHovered = hovered === index;
                     return (
                         <div
                             key={project.id}
