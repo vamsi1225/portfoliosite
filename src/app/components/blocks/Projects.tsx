@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 import Image from 'next/image';
 import { projects } from '@/app/constants/nav';
 
@@ -17,7 +16,7 @@ export default function Projects() {
 
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 relative">
-                {projects.map((project, index) => {
+                {projects.map((project) => {
                     return (
                         <div
                             key={project.id}
