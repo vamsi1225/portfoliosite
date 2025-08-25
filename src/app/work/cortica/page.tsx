@@ -1,111 +1,227 @@
 'use client';
 
-import corticaBanner from '@/app/assets/cortica-banner.jpg';
+// import corticaBanner from '@/app/assets/cortica-banner.jpg';
+// import ambujPic from '@/app/assets/ambuj.png';
+// import samPic from '@/app/assets/sam.png';
+
+// src/app/work/cortica/page.tsx
+
+
+"use client";
+import Image from "next/image";
+
+import { motion } from "framer-motion";
+import corticaBanner from "@/app/assets/cortica-banner.jpg";
+import mobileApp from '@/app/assets/mobile-app.jpg'
 import ambujPic from '@/app/assets/ambuj.png';
 import samPic from '@/app/assets/sam.png';
+import { FaLinkedin, FaRegCopy } from 'react-icons/fa';
 
-export default function CorticaProject() {
+const copyToClipboard = (text: string) => {
+  navigator.clipboard.writeText(text);
+  alert(`${text} copied to clipboard!`);
+};
+
+
+export default function CorticaPage() {
   return (
-    <main className="text-foreground">
-
-      {/* Hero Section */}
-      <section className="relative w-full h-[35vh] sm:h-[40vh] lg:h-[45vh]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${corticaBanner.src})` }}
+    <div className="w-full flex flex-col items-center px-4 mt-8 space-y-16">
+      {/* Section 1 - Hero Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative w-full max-w-6xl h-[400px] md:h-[450px] rounded-2xl overflow-hidden shadow-xl"
+      >
+        <Image
+          src={corticaBanner}
+          alt="Cortica Care Banner"
+          fill
+          className="object-cover object-center"
+          priority
         />
-        <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-center px-4">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Cortica Healthcare
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/20" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">
+            Reimagining Autism Care
           </h1>
-          <p className="text-white text-sm sm:text-base lg:text-lg max-w-2xl">
-            Providing healthcare solutions for children diagnosed with autism in the United States.
+          <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
+            One platform. Integrated therapies. Better outcomes for families.
           </p>
         </div>
-      </section>
+      </motion.div>
 
-      {/* Problem & Solution Section */}
-      <section className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">The Challenge</h2>
-          <p className="text-gray-400 text-sm sm:text-base mb-8">
-            Autism is a complex condition, and managing healthcare for children requires specialized tools. Cortica simplifies doctor-patient management, telehealth, and scheduling for families and medical professionals.
-          </p>
+      {/* Section 2 - Storytelling Block */}
+      {/* Section - How the Project Arrived to Us */}
+      {/* Section - How the Project Arrived to Us */}
+      {/* Section - How the Project Arrived & Our Plan */}
+      {/* Intro Section */}
+      <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto text-white">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Introducing Cortica</h2>
+        <p className="text-base sm:text-lg mb-4">
+          Cortica arrived at our team as a half-baked product—unorganized code and incomplete functionalities. We took the knowledge transfer at blazing speed, analyzing the existing architecture and identifying key improvements. Then, we rolled up our sleeves and began transforming it into a fully functioning healthcare platform.
+        </p>
+        <p className="text-base sm:text-lg">
+          As a client, the Cortica team trusted our plan. From that moment, our focus has been on making the product better and better, introducing usable features, and revamping the entire system for reliability and scalability.
+        </p>
+      </div>
 
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">The Solution</h2>
-          <p className="text-gray-400 text-sm sm:text-base mb-8">
-            The project is divided into Website, Axon, and Telehealth modules. Features include appointment management for doctors, smart scheduling, billing algorithms, and integration with external healthcare systems.
-          </p>
-        </div>
-      </section>
+      {/* Complexity & Refactor Section */}
+      <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto text-white">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-6">Taming the Complexity</h2>
+        <p className="text-base sm:text-lg mb-4">
+          When we first examined Cortica's backend, it was a maze of step functions, convoluted logic, and messy integrations. Connecting with sophisticated healthcare systems like Athena and Central Reach for record-keeping and billing was a daunting challenge. Each process felt fragile and prone to errors.
+        </p>
+        <p className="text-base sm:text-lg mb-4">
+          Taking ownership, I carefully analyzed the existing architecture, refactored the code, and simplified the step functions. Leveraging React, GraphQL, TypeORM, and AWS Lambda, I streamlined the interactions with external systems, making the workflow far more efficient and reliable.
+        </p>
+        <p className="text-base sm:text-lg">
+          The result? Our team no longer faced billing issues with Central Reach or Athena, and the platform's performance became predictable and robust. This was a crucial milestone in transforming Cortica into a dependable healthcare solution.
+        </p>
+      </div>
 
-      {/* Tech Stack Section */}
-      <section className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12 bg-slate-800 py-12 rounded-lg">
+      <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Tech Stack</h2>
-          <p className="text-gray-300 mb-4">
-            SASS, ReactJS, TypeScript, GraphQL, Material UI, TypeORM, MySQL, AWS Lambda, ExpressJS, Auth0
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12">
+            Impact & Metrics
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="bg-slate-800 p-8 rounded-lg shadow-md flex flex-col items-center">
+              <span className="text-5xl sm:text-6xl font-bold text-white mb-4">50%</span>
+              <p className="text-gray-300 text-center">Faster appointment sync</p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-slate-800 p-8 rounded-lg shadow-md flex flex-col items-center">
+              <span className="text-5xl sm:text-6xl font-bold text-white mb-4">4x</span>
+              <p className="text-gray-300 text-center">Application usage growth</p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-slate-800 p-8 rounded-lg shadow-md flex flex-col items-center">
+              <span className="text-5xl sm:text-6xl font-bold text-white mb-4">99%</span>
+              <p className="text-gray-300 text-center">Billing accuracy after refactor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full py-16 my-16 md:my-20 px-4 sm:px-6 lg:px-12">
+        {/* App Image */}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+          An App Doctors and Caregivers Loved
+        </h2>
+        <div className="relative w-full h-[35vh] sm:h-[40vh] lg:h-[45vh] rounded-lg overflow-hidden mb-8">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${mobileApp.src})` }}
+          />
+        </div>
+
+        {/* Story Text */}
+        <div className="max-w-6xl mx-auto text-white mb-12">
+
+          <p className="text-gray-300 text-sm sm:text-base">
+            Before this app, appointment management was chaotic: caregivers called admins, doctors received text messages, and data syncing was slow.
+            <br /><br />
+            I developed this application single-handedly, bringing live appointment updates, seamless syncing with Central Reach and Athena, and instant access to all critical information. Just a tap, and the data is at the fingertips of doctors and caregivers. The app became an instant success, praised by everyone for simplifying their daily workflow.
           </p>
         </div>
-      </section>
 
-      {/* Responsibilities Section */}
-      <section className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Primary Responsibilities</h2>
-          <ul className="list-disc list-inside text-gray-400 space-y-2">
-            <li>Analyze client-provided epics and execute them in iterative phases.</li>
-            <li>Develop UI elements with ReactJS and reusable components.</li>
-            <li>Handle database modifications and write migration scripts.</li>
-            <li>Develop APIs using Apollo GraphQL and TypeORM scripts.</li>
-            <li>Maintain integration with Central Reach and AthenaHealth systems.</li>
-            <li>Write and maintain AWS Lambda functions to support application functionalities.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Selected Accomplishments Section */}
-      <section className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12 bg-slate-900 py-12 rounded-lg">
-        <div className="max-w-6xl mx-auto text-white">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Selected Accomplishments</h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Developed a billing algorithm crucial for revenue generation.</li>
-            <li>Single-handedly developed the frontend application for doctor appointment management.</li>
-            <li>Implemented smart scheduling for efficient appointment handling between doctors and clients.</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Contact / Reference Cards Section */}
-      <section className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto text-center mb-8">
-          <h2 className="text-3xl sm:text-4xl font-bold">For more information on my work, feel free to contact:</h2>
-        </div>
-
+        {/* Metrics Cards */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          
           {/* Card 1 */}
-          <div className="flex flex-col items-center text-center bg-slate-800 p-6 rounded-lg shadow-md w-full">
-            <div className="w-32 h-32 mb-4">
-              <img src={ambujPic.src} alt="Ambuj Shrivastava" className="w-full h-full object-cover rounded-full" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-1">Ambuj Shrivastava</h3>
-            <p className="text-gray-300 mb-1">Product Owner at Cortica</p>
-            <p className="text-gray-400 text-sm">ashrivastava@corticacare.com</p>
+          <div className="bg-slate-800 p-10 rounded-lg shadow-md flex flex-col items-center hover:scale-105 transition-transform duration-300">
+            <span className="text-5xl sm:text-6xl font-bold text-white mb-4">4000+</span>
+            <p className="text-gray-300 text-center">Doctors using the app daily</p>
           </div>
 
           {/* Card 2 */}
-          <div className="flex flex-col items-center text-center bg-slate-800 p-6 rounded-lg shadow-md w-full">
+          <div className="bg-slate-800 p-10 rounded-lg shadow-md flex flex-col items-center hover:scale-105 transition-transform duration-300">
+            <span className="text-5xl sm:text-6xl font-bold text-white mb-4">1000+</span>
+            <p className="text-gray-300 text-center">Appointments synced automatically</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full my-20 px-4 sm:px-6 lg:px-12">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-12">
+          References
+        </h2>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Card 1 */}
+          <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
             <div className="w-32 h-32 mb-4">
-              <img src={samPic.src} alt="Sam Roy" className="w-full h-full object-cover rounded-full" />
+              <img
+                src={ambujPic.src}
+                alt="Ambuj Shrivastava"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-1">Ambuj Shrivastava</h3>
+            <p className="text-gray-300 mb-1">Product Owner at Cortica</p>
+            <div className="flex items-center justify-center text-gray-400 space-x-2 mb-2">
+              <span>ashrivastava@corticacare.com</span>
+              <button
+                onClick={() => copyToClipboard('ashrivastava@corticacare.com')}
+                className="bg-gray-700 p-1 rounded-full hover:bg-gray-600 transition"
+                title="Copy email"
+              >
+                <FaRegCopy className="text-white" />
+              </button>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/ambuj-shrivastava/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-400 flex items-center space-x-2"
+            >
+              <FaLinkedin /> <span>LinkedIn</span>
+            </a>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+            <div className="w-32 h-32 mb-4">
+              <img
+                src={samPic.src}
+                alt="Sam Roy"
+                className="w-full h-full object-cover rounded-full"
+              />
             </div>
             <h3 className="text-xl font-bold text-white mb-1">Sam Roy</h3>
             <p className="text-gray-300 mb-1">Head of IT Operations at Cortica</p>
-            <p className="text-gray-400 text-sm">sam.roy@corticacare.com</p>
+            <div className="flex items-center justify-center text-gray-400 space-x-2 mb-2">
+              <span>sam.roy@corticacare.com</span>
+              <button
+                onClick={() => copyToClipboard('sam.roy@corticacare.com')}
+                className="bg-gray-700 p-1 rounded-full hover:bg-gray-600 transition"
+                title="Copy email"
+              >
+                <FaRegCopy className="text-white" />
+              </button>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/samroy92/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-400 flex items-center space-x-2"
+            >
+              <FaLinkedin /> <span>LinkedIn</span>
+            </a>
           </div>
-
         </div>
-      </section>
-    </main>
+      </div>
+
+
+
+    </div>
   );
 }
+
+
+
+
