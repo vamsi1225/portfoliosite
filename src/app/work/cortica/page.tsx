@@ -17,7 +17,7 @@ const copyToClipboard = (text: string) => {
 export default function CorticaPage() {
   return (
     <div className="w-full flex flex-col items-center px-4 mt-8 space-y-16">
-
+      
       {/* Hero Banner */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -129,7 +129,7 @@ export default function CorticaPage() {
           References
         </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-
+          
           {/* Ambuj */}
           <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
             <div className="w-32 h-32 mb-4 relative">
