@@ -152,13 +152,15 @@ export default function CorticaPage() {
         </h2>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Card 1 */}
+          {/* Reference Card 1 */}
           <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
-            <div className="w-32 h-32 mb-4">
-              <img
-                src={ambujPic.src}
+            <div className="w-32 h-32 mb-4 relative">
+              <Image
+                src={ambujPic}
                 alt="Ambuj Shrivastava"
-                className="w-full h-full object-cover rounded-full"
+                width={128}
+                height={128}
+                className="rounded-full object-cover"
               />
             </div>
             <h3 className="text-xl font-bold text-white mb-1">Ambuj Shrivastava</h3>
@@ -166,7 +168,7 @@ export default function CorticaPage() {
             <div className="flex items-center justify-center text-gray-400 space-x-2 mb-2">
               <span>ashrivastava@corticacare.com</span>
               <button
-                onClick={() => copyToClipboard('ashrivastava@corticacare.com')}
+                onClick={() => copyToClipboard("ashrivastava@corticacare.com")}
                 className="bg-gray-700 p-1 rounded-full hover:bg-gray-600 transition"
                 title="Copy email"
               >
@@ -183,13 +185,15 @@ export default function CorticaPage() {
             </a>
           </div>
 
-          {/* Card 2 */}
+          {/* Reference Card 2 */}
           <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
-            <div className="w-32 h-32 mb-4">
-              <img
-                src={samPic.src}
+            <div className="w-32 h-32 mb-4 relative">
+              <Image
+                src={samPic}
                 alt="Sam Roy"
-                className="w-full h-full object-cover rounded-full"
+                width={128}
+                height={128}
+                className="rounded-full object-cover"
               />
             </div>
             <h3 className="text-xl font-bold text-white mb-1">Sam Roy</h3>
@@ -197,7 +201,7 @@ export default function CorticaPage() {
             <div className="flex items-center justify-center text-gray-400 space-x-2 mb-2">
               <span>sam.roy@corticacare.com</span>
               <button
-                onClick={() => copyToClipboard('sam.roy@corticacare.com')}
+                onClick={() => copyToClipboard("sam.roy@corticacare.com")}
                 className="bg-gray-700 p-1 rounded-full hover:bg-gray-600 transition"
                 title="Copy email"
               >
