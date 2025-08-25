@@ -1,18 +1,10 @@
 'use client';
 
-// import corticaBanner from '@/app/assets/cortica-banner.jpg';
-// import ambujPic from '@/app/assets/ambuj.png';
-// import samPic from '@/app/assets/sam.png';
-
-// src/app/work/cortica/page.tsx
-
-
-"use client";
 import Image from "next/image";
-
 import { motion } from "framer-motion";
+
 import corticaBanner from "@/app/assets/cortica-banner.jpg";
-import mobileApp from '@/app/assets/mobile-app.jpg'
+import mobileApp from '@/app/assets/mobile-app.jpg';
 import ambujPic from '@/app/assets/ambuj.png';
 import samPic from '@/app/assets/sam.png';
 import { FaLinkedin, FaRegCopy } from 'react-icons/fa';
@@ -22,11 +14,11 @@ const copyToClipboard = (text: string) => {
   alert(`${text} copied to clipboard!`);
 };
 
-
 export default function CorticaPage() {
   return (
     <div className="w-full flex flex-col items-center px-4 mt-8 space-y-16">
-      {/* Section 1 - Hero Banner */}
+
+      {/* Hero Banner */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -51,11 +43,7 @@ export default function CorticaPage() {
         </div>
       </motion.div>
 
-      {/* Section 2 - Storytelling Block */}
-      {/* Section - How the Project Arrived to Us */}
-      {/* Section - How the Project Arrived to Us */}
-      {/* Section - How the Project Arrived & Our Plan */}
-      {/* Intro Section */}
+      {/* Introducing Cortica */}
       <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto text-white">
         <h2 className="text-4xl sm:text-5xl font-bold mb-6">Introducing Cortica</h2>
         <p className="text-base sm:text-lg mb-4">
@@ -66,40 +54,35 @@ export default function CorticaPage() {
         </p>
       </div>
 
-      {/* Complexity & Refactor Section */}
+      {/* Taming the Complexity */}
       <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto text-white">
         <h2 className="text-4xl sm:text-5xl font-bold mb-6">Taming the Complexity</h2>
         <p className="text-base sm:text-lg mb-4">
-          When we first examined Cortica's backend, it was a maze of step functions, convoluted logic, and messy integrations. Connecting with sophisticated healthcare systems like Athena and Central Reach for record-keeping and billing was a daunting challenge. Each process felt fragile and prone to errors.
+          When we first examined Cortica&apos;s backend, it was a maze of step functions, convoluted logic, and messy integrations. Connecting with sophisticated healthcare systems like Athena and Central Reach for record-keeping and billing was a daunting challenge. Each process felt fragile and prone to errors.
         </p>
         <p className="text-base sm:text-lg mb-4">
           Taking ownership, I carefully analyzed the existing architecture, refactored the code, and simplified the step functions. Leveraging React, GraphQL, TypeORM, and AWS Lambda, I streamlined the interactions with external systems, making the workflow far more efficient and reliable.
         </p>
         <p className="text-base sm:text-lg">
-          The result? Our team no longer faced billing issues with Central Reach or Athena, and the platform's performance became predictable and robust. This was a crucial milestone in transforming Cortica into a dependable healthcare solution.
+          The result? Our team no longer faced billing issues with Central Reach or Athena, and the platform&apos;s performance became predictable and robust. This was a crucial milestone in transforming Cortica into a dependable healthcare solution.
         </p>
       </div>
 
+      {/* Impact & Metrics */}
       <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12">
             Impact & Metrics
           </h2>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
             <div className="bg-slate-800 p-8 rounded-lg shadow-md flex flex-col items-center">
               <span className="text-5xl sm:text-6xl font-bold text-white mb-4">50%</span>
               <p className="text-gray-300 text-center">Faster appointment sync</p>
             </div>
-
-            {/* Card 2 */}
             <div className="bg-slate-800 p-8 rounded-lg shadow-md flex flex-col items-center">
               <span className="text-5xl sm:text-6xl font-bold text-white mb-4">4x</span>
               <p className="text-gray-300 text-center">Application usage growth</p>
             </div>
-
-            {/* Card 3 */}
             <div className="bg-slate-800 p-8 rounded-lg shadow-md flex flex-col items-center">
               <span className="text-5xl sm:text-6xl font-bold text-white mb-4">99%</span>
               <p className="text-gray-300 text-center">Billing accuracy after refactor</p>
@@ -108,37 +91,31 @@ export default function CorticaPage() {
         </div>
       </div>
 
+      {/* Doctor & Caregiver App */}
       <div className="w-full py-16 my-16 md:my-20 px-4 sm:px-6 lg:px-12">
-        {/* App Image */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
           An App Doctors and Caregivers Loved
         </h2>
         <div className="relative w-full h-[35vh] sm:h-[40vh] lg:h-[45vh] rounded-lg overflow-hidden mb-8">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${mobileApp.src})` }}
+          <Image
+            src={mobileApp}
+            alt="Cortica Mobile App"
+            fill
+            className="object-cover object-center rounded-lg"
           />
         </div>
-
-        {/* Story Text */}
         <div className="max-w-6xl mx-auto text-white mb-12">
-
           <p className="text-gray-300 text-sm sm:text-base">
             Before this app, appointment management was chaotic: caregivers called admins, doctors received text messages, and data syncing was slow.
             <br /><br />
             I developed this application single-handedly, bringing live appointment updates, seamless syncing with Central Reach and Athena, and instant access to all critical information. Just a tap, and the data is at the fingertips of doctors and caregivers. The app became an instant success, praised by everyone for simplifying their daily workflow.
           </p>
         </div>
-
-        {/* Metrics Cards */}
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Card 1 */}
           <div className="bg-slate-800 p-10 rounded-lg shadow-md flex flex-col items-center hover:scale-105 transition-transform duration-300">
             <span className="text-5xl sm:text-6xl font-bold text-white mb-4">4000+</span>
             <p className="text-gray-300 text-center">Doctors using the app daily</p>
           </div>
-
-          {/* Card 2 */}
           <div className="bg-slate-800 p-10 rounded-lg shadow-md flex flex-col items-center hover:scale-105 transition-transform duration-300">
             <span className="text-5xl sm:text-6xl font-bold text-white mb-4">1000+</span>
             <p className="text-gray-300 text-center">Appointments synced automatically</p>
@@ -146,13 +123,14 @@ export default function CorticaPage() {
         </div>
       </div>
 
+      {/* References */}
       <div className="w-full my-20 px-4 sm:px-6 lg:px-12">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-12">
           References
         </h2>
-
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Reference Card 1 */}
+
+          {/* Ambuj */}
           <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
             <div className="w-32 h-32 mb-4 relative">
               <Image
@@ -185,7 +163,7 @@ export default function CorticaPage() {
             </a>
           </div>
 
-          {/* Reference Card 2 */}
+          {/* Sam */}
           <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
             <div className="w-32 h-32 mb-4 relative">
               <Image
@@ -217,15 +195,10 @@ export default function CorticaPage() {
               <FaLinkedin /> <span>LinkedIn</span>
             </a>
           </div>
+
         </div>
       </div>
-
-
 
     </div>
   );
 }
-
-
-
-
