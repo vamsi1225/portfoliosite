@@ -1,3 +1,4 @@
+import Contact from "./components/blocks/Contact";
 import Header from "./components/common/Header";
 import "./globals.css";
 import { Inter, JetBrains_Mono } from "next/font/google";
@@ -26,8 +27,11 @@ export const metadata = {
   },
 };
 
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrains.variable}`}>
       <body>
@@ -36,11 +40,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="flex-grow container mx-auto max-w-6xl px-4">
             {children}
           </div>
+          <Contact />
         </main>
-
       </body>
-
     </html>
   );
 }
-

@@ -1,5 +1,4 @@
 import AboutIntro from "../components/blocks/AboutIntro";
-import Contact from "../components/blocks/Contact";
 import Interests from "../components/blocks/Interests";
 import ProfileHeader from "../components/blocks/ProfileHeader";
 import WorkExperience from "../components/blocks/WorkExperience";
@@ -10,12 +9,7 @@ export default function About() {
       <ProfileHeader />
       <AboutIntro />
       <WorkExperience />
-      <Interests/>
-      <Contact/>
+      <Interests />
     </div>
   );
 }
-
-
-
-
