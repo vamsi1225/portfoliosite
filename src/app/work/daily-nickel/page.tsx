@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import preSalesBanner from '@/app/assets/presales-banner.jpg'; // Banner image
-import salilPic from '@/app/assets/salil.png';
-import rajeshPic from '@/app/assets/rajesh.png';
 
 export default function PreSalesProject() {
   return (
@@ -73,7 +71,7 @@ export default function PreSalesProject() {
                       height={80}
                       className="object-contain w-auto h-auto filter brightness-110 contrast-110"
                       style={{ maxWidth: '80px', maxHeight: '80px' }}
-                      onError={(e) => {
+                      onError={() => {
                         console.error(`Failed to load logo for ${tech.name}:`, tech.logo);
                       }}
                     />

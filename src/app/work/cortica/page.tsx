@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import corticaBanner from "@/app/assets/cortica-banner.jpg";
 import mobileApp from '@/app/assets/mobile-app.jpg';
 import ambujPic from '@/app/assets/ambuj.png';
-import samPic from '@/app/assets/sam.png';
 import { FaLinkedin, FaRegCopy } from 'react-icons/fa';
 
 const copyToClipboard = (text: string) => {
@@ -118,7 +117,7 @@ export default function CorticaPage() {
                     height={80}
                     className="object-contain w-auto h-auto filter brightness-110 contrast-110"
                     style={{ maxWidth: '80px', maxHeight: '80px' }}
-                    onError={(e) => {
+                    onError={() => {
                       console.error(`Failed to load logo for ${tech.name}:`, tech.logo);
                     }}
                   />

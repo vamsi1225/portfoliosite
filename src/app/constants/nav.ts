@@ -15,7 +15,6 @@ export const rotatingTitles = [
 import autism from '@/app/assets/autism.jpg';
 import presentation from '@/app/assets/presentation.jpg';
 import sticky from '@/app/assets/sticky.jpg';
-import shopping from '@/app/assets/shopping.jpg';
 
 export const projects = [
   {

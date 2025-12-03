@@ -40,7 +40,7 @@ export default function Skills(){
                   height={80}
                   className="object-contain w-auto h-auto filter brightness-125 contrast-125 drop-shadow-lg"
                   style={{ maxWidth: '80px', maxHeight: '80px' }}
-                  onError={(e) => {
+                  onError={() => {
                     console.error(`Failed to load logo for ${tech.name}:`, tech.logo);
                   }}
                 />

@@ -1,18 +1,8 @@
 'use client';
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 import AbsyCoverPhoto from "@/app/assets/AbsyCoverPhoto.png";
-import mobileApp from '@/app/assets/mobile-app.jpg';
-import ambujPic from '@/app/assets/ambuj.png';
-import samPic from '@/app/assets/sam.png';
-import { FaLinkedin, FaRegCopy } from 'react-icons/fa';
-
-const copyToClipboard = (text: string) => {
-  navigator.clipboard.writeText(text);
-  alert(`${text} copied to clipboard!`);
-};
 
 export default function AbsyPage() {
     return (
@@ -81,7 +71,7 @@ export default function AbsyPage() {
                           height={80}
                           className="object-contain w-auto h-auto filter brightness-110 contrast-110"
                           style={{ maxWidth: '80px', maxHeight: '80px' }}
-                          onError={(e) => {
+                          onError={() => {
                             console.error(`Failed to load logo for ${tech.name}:`, tech.logo);
                           }}
                         />
