@@ -47,24 +47,22 @@ export default function CorticaPage() {
       <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto text-white">
         <h2 className="text-4xl sm:text-5xl font-bold mb-6">Introducing Cortica</h2>
         <p className="text-base sm:text-lg mb-4">
-          Cortica arrived at our team as a half-baked product—unorganized code and incomplete functionalities. We took the knowledge transfer at blazing speed, analyzing the existing architecture and identifying key improvements. Then, we rolled up our sleeves and began transforming it into a fully functioning healthcare platform.
-        </p>
-        <p className="text-base sm:text-lg">
-          As a client, the Cortica team trusted our plan. From that moment, our focus has been on making the product better and better, introducing usable features, and revamping the entire system for reliability and scalability.
+        Cortica came to our team as an evolving product with strong potential. We quickly ramped up through a focused knowledge transfer, assessed the existing architecture, and identified opportunities for enhancement. Together with the Cortica team, we built a clear roadmap and began elevating the platform with robust features, improved reliability, and scalable design
         </p>
       </div>
+      
 
       {/* Taming the Complexity */}
       <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12 max-w-6xl mx-auto text-white">
         <h2 className="text-4xl sm:text-5xl font-bold mb-6">Taming the Complexity</h2>
         <p className="text-base sm:text-lg mb-4">
-          When we first examined Cortica&apos;s backend, it was a maze of step functions, convoluted logic, and messy integrations. Connecting with sophisticated healthcare systems like Athena and Central Reach for record-keeping and billing was a daunting challenge. Each process felt fragile and prone to errors.
+          When we first examined Cortica&apos;s backend, it was a maze of step functions, convoluted logic, and messy integrations. Connecting with sophisticated healthcare systems for record-keeping and billing was a daunting challenge. Each process felt fragile and prone to errors.
         </p>
         <p className="text-base sm:text-lg mb-4">
-          Taking ownership, I carefully analyzed the existing architecture, refactored the code, and simplified the step functions. Leveraging React, GraphQL, TypeORM, and AWS Lambda, I streamlined the interactions with external systems, making the workflow far more efficient and reliable.
+          Taking ownership, I carefully analyzed the existing architecture, refactored the code, and simplified the step functions. Leveraging React, GraphQL, TypeORM, and AWS, I streamlined the interactions with external systems, making the workflow far more efficient and reliable.
         </p>
         <p className="text-base sm:text-lg">
-          The result? Our team no longer faced billing issues with Central Reach or Athena, and the platform&apos;s performance became predictable and robust. This was a crucial milestone in transforming Cortica into a dependable healthcare solution.
+          The result? Our team no longer faced billing issues with EMRs, and the platform&apos;s performance became predictable and robust. This was a crucial milestone in transforming Cortica into a dependable healthcare solution.
         </p>
       </div>
 
@@ -91,6 +89,49 @@ export default function CorticaPage() {
         </div>
       </div>
 
+      {/* Tech Stack */}
+      <div className="w-full my-16 md:my-20 px-4 sm:px-6 lg:px-12">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
+            Tech Stack
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { name: 'React', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg' },
+              { name: 'Node.js', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg' },
+              { name: 'AWS', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
+              { name: 'GraphQL', logo: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain-wordmark.svg' },
+            ].map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex flex-col items-center justify-center p-6 bg-slate-800 rounded-xl hover:bg-slate-700 hover:scale-105 transition-all duration-300 border border-slate-600/50 hover:border-slate-500/70 shadow-lg hover:shadow-xl"
+              >
+                <div className="mb-3 flex items-center justify-center min-h-[80px] w-full bg-white/10 rounded-lg p-4">
+                  <img
+                    src={tech.logo}
+                    alt={tech.name}
+                    width={80}
+                    height={80}
+                    className="object-contain w-auto h-auto filter brightness-110 contrast-110"
+                    style={{ maxWidth: '80px', maxHeight: '80px' }}
+                    onError={(e) => {
+                      console.error(`Failed to load logo for ${tech.name}:`, tech.logo);
+                    }}
+                  />
+                </div>
+                <span className="text-sm sm:text-base font-semibold text-gray-100 mt-2 text-center">
+                  {tech.name}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Doctor & Caregiver App */}
       <div className="w-full py-16 my-16 md:my-20 px-4 sm:px-6 lg:px-12">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
@@ -108,7 +149,7 @@ export default function CorticaPage() {
           <p className="text-gray-300 text-sm sm:text-base">
             Before this app, appointment management was chaotic: caregivers called admins, doctors received text messages, and data syncing was slow.
             <br /><br />
-            I developed this application single-handedly, bringing live appointment updates, seamless syncing with Central Reach and Athena, and instant access to all critical information. Just a tap, and the data is at the fingertips of doctors and caregivers. The app became an instant success, praised by everyone for simplifying their daily workflow.
+            We developed this application, bringing live appointment updates, seamless syncing with EMR, and instant access to all critical information. Just a tap, and the data is at the fingertips of doctors and caregivers. The app became an instant success, praised by everyone for simplifying their daily workflow.
           </p>
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -128,7 +169,7 @@ export default function CorticaPage() {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-12">
           References
         </h2>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-12">
           
           {/* Ambuj */}
           <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
@@ -164,7 +205,7 @@ export default function CorticaPage() {
           </div>
 
           {/* Sam */}
-          <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+          {/* <div className="bg-slate-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
             <div className="w-32 h-32 mb-4 relative">
               <Image
                 src={samPic}
@@ -194,7 +235,7 @@ export default function CorticaPage() {
             >
               <FaLinkedin /> <span>LinkedIn</span>
             </a>
-          </div>
+          </div> */}
 
         </div>
       </div>

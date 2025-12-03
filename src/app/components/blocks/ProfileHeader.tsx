@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import profilePic from '@/app/assets/profile.jpg';
-import backgroundImage from '@/app/assets/header-bg.jpg';
+import profilePic from '@/app/assets/profile.jpeg';
+import backgroundImage from '@/app/assets/header-bg.webp';
 
 export default function ProfileHeader() {
   return (
@@ -20,12 +20,13 @@ export default function ProfileHeader() {
 
       {/* Profile Picture (Floating) */}
       <div className="absolute top-44 md:top-52">
-        <div className="w-32 h-32 md:w-36 md:h-36 rounded-full border-4 border-zinc-900 overflow-hidden shadow-lg">
+        <div className="w-32 h-24 md:w-36 md:h-36 rounded-full border-4 border-zinc-900 overflow-hidden shadow-lg">
           <Image
             src={profilePic}
-            alt="Shravan Naikini"
+            alt="Vamsi Morisetti"
             width={144}
             height={144}
+            style={{ height: 'inherit' }}
             className="object-cover"
           />
         </div>

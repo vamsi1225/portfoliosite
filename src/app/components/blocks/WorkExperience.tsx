@@ -6,15 +6,11 @@ export default function WorkExperience() {
       <h2 className="text-3xl font-semibold mb-4 text-emerald-400">Work Experience & Skills</h2>
 
       <p className="mb-4 text-lg leading-relaxed">
-        I have over 4 years of professional experience as a Full-stack Software Engineer at Absyz Inc., Hyderabad, India.  
-        During this time, I developed client-side healthcare web applications, managed full development lifecycles,  
-        and led teams to improve productivity and deliver scalable solutions.
+      At Absyz Software Consulting, I worked as a Full Stack Developer on end-to-end solutions for web applications across healthcare, e-commerce, and enterprise platforms. I built scalable RESTful APIs using Node.js and Express.js, improving backend response times and ensuring secure, reliable data communication. By optimizing database interactions with TypeORM and MySQL, I contributed to a 20% boost in performance and helped support high-traffic workloads. On the frontend, I developed responsive, modular interfaces using React and Angular, which streamlined development cycles and made ongoing updates more efficient. My work directly supported faster product rollouts, better user experiences, and helped the company deliver critical solutions to clients on time. I also collaborated closely with cross-functional teams, maintained clean Git workflows, and ensured that each application was built with performance, maintainability, and scalability in mind.
       </p>
 
       <p className="mb-4 text-lg leading-relaxed">
-        My expertise includes developing secure authentication systems, optimizing microservices for performance,  
-        and building analytics dashboards to deliver actionable customer insights.  
-        I have collaborated extensively across teams to ensure seamless integration and project success.
+        
       </p>
 
       <p className="mb-4 text-lg leading-relaxed">

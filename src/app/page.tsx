@@ -1,5 +1,6 @@
 import HeroIntro from "./components/blocks/HeroIntro";
 import Projects from "./components/blocks/Projects";
+import Skills from "./components/blocks/Skills";
 import DummySection from "./pages/test";
 
 export default function Home() {
@@ -7,7 +8,9 @@ export default function Home() {
     <div>
       <HeroIntro />
       <Projects />
-      <DummySection />
+      <Skills/>
+
+      {/* <DummySection /> */}
     </div>
   );
 }

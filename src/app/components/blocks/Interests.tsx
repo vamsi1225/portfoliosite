@@ -13,7 +13,7 @@ export default function Interests() {
         I also love diving into web development trends, constantly exploring new technologies and ways to craft clean, fast, and elegant user experiences.
       </p>
 
-      <div>
+      {/* <div>
         <h3 className="text-xl font-semibold mb-2">Checkout my Spotify playlist</h3>
         <iframe
           style={{ borderRadius: '12px' }}
@@ -25,7 +25,7 @@ export default function Interests() {
           loading="lazy"
           title="Shravan's Spotify Playlist"
         ></iframe>
-      </div>
+      </div> */}
     </section>
   );
 }

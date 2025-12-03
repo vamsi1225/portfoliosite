@@ -18,7 +18,7 @@ export default function Header() {
           &lt;Shravan /&gt;
         </Link> */}
          <Link href="/" className="text-xl font-bold">
-           Shravan.Naikini
+           Vamsi Morisetti
         </Link>
 
         {/* Desktop Nav */}

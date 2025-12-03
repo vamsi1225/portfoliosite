@@ -8,14 +8,14 @@ export default function Projects() {
       {/* Section heading */}
       <div className="text-center mb-8 lg:mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold">Featured Work</h2>
-        <p className="mt-2 text-gray-400 text-sm sm:text-base">
+        {/* <p className="mt-2 text-gray-400 text-sm sm:text-base">
           Some selected projects that blend clean design, solid engineering, and
           real-world impact.
-        </p>
+        </p> */}
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 relative">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-3 relative font-bold">
         {projects.map((project) => {
           return (
             <div
@@ -25,7 +25,7 @@ export default function Projects() {
     h-[260px] sm:h-[300px] lg:h-[360px]
     lg:hover:z-50 lg:hover:scale-125
   `}
-              style={{ transformOrigin: "center" }}
+              style={{ transformOrigin: "center" , display: 'flex', flexDirection: 'column', alignItems: 'center'}}
             >
               {/* Background */}
               <Image
@@ -49,7 +49,7 @@ export default function Projects() {
               </div>
 
               {/* Bottom description */}
-              <div className="absolute bottom-3 left-3 right-3 z-10">
+              <div className="absolute bottom-3 left-3 right-3 z-10" style={{display: 'flex', flexDirection: 'column', alignItems:'center'}}>
                 <p className="text-gray-200 text-xs sm:text-sm mb-2 line-clamp-2 lg:group-hover:line-clamp-none">
                   {project.description}
                 </p>
