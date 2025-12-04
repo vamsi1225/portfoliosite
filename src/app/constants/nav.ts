@@ -8,7 +8,7 @@ export const NAV_ITEMS = [
 export const rotatingTitles = [
   { text: 'smarter', color: 'text-violet-400' },
   { text: 'faster', color: 'text-orange-500' },
-  { text: 'an intuitive experience', color: 'text-red-600' }
+  { text: 'more intuitive', color: 'text-red-600' }
   // { text: "Shreya's man", color: 'text-pink-600' }
 ];
 
