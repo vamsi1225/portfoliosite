@@ -1,8 +1,6 @@
 'use client';
 
-import { rotatingTitles } from '@/app/constants/nav';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const certifications = [
   {
@@ -22,14 +20,6 @@ const certifications = [
 ];
 
 export default function Certifications() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % rotatingTitles.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="mt-4 md:mt-16 text-foreground m-0 p-0 pb-16">
